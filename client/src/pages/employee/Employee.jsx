@@ -9,7 +9,7 @@ function Employee() {
 
   return (
     <div className={style.container}>
-      {!openModal && 
+      {(!openModal && !isEdit) && 
       <>
       <h3>Employee List</h3>
       <div className={style.box}>
@@ -55,7 +55,7 @@ function Employee() {
     </>
       
     }
-    {openModal && 
+    {(openModal || isEdit) && 
           <CreateEmployee setOpenModal={setOpenModal} isEdit={isEdit} setIsEdit={setIsEdit}/>
         }
     </div>

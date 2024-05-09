@@ -1,9 +1,9 @@
-import './home.css'
+import style from './home.module.css'
 
 function Home() {
   return (
-    <div>
-      HomePage
+    <div className={style.container}>
+      <h1>Welcome Admin Panel</h1>
     </div>
   )
 }

@@ -2,19 +2,28 @@ import { useState } from 'react'
 import style from './createEmployee.module.css'
 import CloseIcon from '@mui/icons-material/Close';
 
+// Create and Update Employee Data
+
 function CreateEmployee({setOpenModal, isEdit, setIsEdit}) {
 
     const [file, setFile] = useState(null)
 
     const handleSubmit = e => {
         e.preventDefault();
+        if(isEdit) setIsEdit(false)
         setOpenModal(false)
-        setIsEdit(false)
+        
+    }
+
+    const handleClose = e =>{
+        e.preventDefault();
+        if(isEdit) setIsEdit(false)
+        setOpenModal(false)
     }
 
   return (
     <div className={style.container}>
-        <CloseIcon onClick={()=> setOpenModal(false)} fontSize='large' className={style.icon}/>
+        <CloseIcon onClick={handleClose} fontSize='large' className={style.icon}/>
       <form>
         <div className={style.item}>
             <label>Name</label>
@@ -43,7 +52,7 @@ function CreateEmployee({setOpenModal, isEdit, setIsEdit}) {
         <div className={style.item}>
             <label>Gender</label>
             <div>
-            <input type="radio" checked="true" name="user_gender"/> <span> Male</span>
+            <input type="radio" name="user_gender"/> <span> Male</span>
                 <br />
                 <input type="radio"  name="user_gender"/><span> Female</span>
             </div>
