@@ -35,8 +35,12 @@ const employeeSchema = new mongoose.Schema({
     },
 
     f_Course : {
-        type : String,
+        type : [String],
         enum : ["MCA", "BCA", "BSC"],
+    },
+    isActive : {
+        type : String,
+        default : "active"
     }
     
 }, {timestamps : true})
