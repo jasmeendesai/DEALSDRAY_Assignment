@@ -2,7 +2,9 @@
 
 This project is an Employee Management System designed to help organizations manage their employees' records effectively. It provides capabilities to list, create, edit, and delete employee details through a web interface. The system is built using React, Node.js, and MongoDB.
 
-###Live demo 
+## Live Demo
+
+You can try out the live demo of the app [here](https://amazing-eclair-c3891d.netlify.app).
 
 ## Features
 
