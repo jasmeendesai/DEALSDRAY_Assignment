@@ -4,7 +4,7 @@ This project is an Employee Management System designed to help organizations man
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://amazing-eclair-c3891d.netlify.app).
+You can try out the live demo of the app [here]("https://delightful-figolla-4ce327.netlify.app").
 
 ## Features
 
