@@ -9,14 +9,14 @@ export const AuthContextProvider = ({children}) => {
     );
 
     const login = async (inputs)=>{
-        const res = await axios.post("http://localhost:5000/api/admin/login", inputs, {
+        const res = await axios.post("https://aware-satisfying-belly.glitch.me/api/admin/login", inputs, {
             withCredentials :true,
         })
         setCurrentUser(res.data)
     }
 
     const logout = async (inputs)=>{
-        const res = await axios.post("http://localhost:5000/api/admin/logout", {}, {
+        const res = await axios.post("https://aware-satisfying-belly.glitch.me/api/admin/logout", {}, {
             withCredentials :true,
         })
 
