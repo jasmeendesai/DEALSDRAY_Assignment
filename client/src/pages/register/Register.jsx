@@ -26,7 +26,7 @@ function Register() {
           return;
         }
         try {
-          await axios.post("http://localhost:5000/api/admin/register", inputs)
+          await axios.post("https://aware-satisfying-belly.glitch.me/api/admin/register", inputs)
           navigate("/login")
         } catch (err) {
           setErr(err.response.data)
