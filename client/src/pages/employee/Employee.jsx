@@ -41,7 +41,7 @@ function Employee() {
   const { mutate } = useCustomMutation(queryClient, mutationOptions);
 
   const handleDelete = async (id) => {
-    await mutate(makeRequest.delete(`/employee/${id}`));
+    await mutate(makeRequest.put.bind(null, `/employee`), {employeeId : id});
   }
 
   const handleChange = (e) => {
